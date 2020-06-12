@@ -16,43 +16,55 @@
 
       <div class="form-item">
         <label for="animalType" class="primary">Animal Type</label>
-        <input type="text" id="animalType" required/>
-      </div>
-
-      <div class="form-item">
-        <label for="habitat" class="primary">Habitat</label>
-        <select id="habitat">
+        <select name="animalType" id="animalType" class="primary">
           <option value=""></option>
-          <option value="Forest">Forest</option>
-          <option value="Pond">Pond</option>
-          <option value="Moors">Moors</option>
-          <option value="River">River</option>
-          <option value="Seaside">Seaside</option>
-          <option value="Countryside">Countryside</option>
-          <option value="Meadow">Meadow</option>
-          <option value="Hillside">Hillside</option>
+          <option value="Bird">Bird</option>
+          <option value="Mammal">Mammal</option>
+          <option value="Amphibian">Amphibian</option>
+          <option value="Fish">Fish</option>
+          <option value="Beastie">Beastie</option>
+          <option value="Reptile">Reptile</option>
         </select>
-      </div>
-
-      <div class="form-item">
-        <label for="contributorName" class="primary">Contributor Name</label>
-        <input type="text" id="contributorName" required/>
-      </div>
-
-      <div class="form-item">
-        <label for="contributorAge" class="primary">Contributor Age</label>
-        <input type="number" id="contributorAge" name="contributorAge" min="1" max="123">
-      </div>
-
-      <div class="form-item">
-        <label for="observationDateTime" class="primary">When Was Animal Observed?</label>
-        <input type="datetime-local" id="observationDateTime" name="observationDateTime">
-      </div>
+      </label>
     </div>
-    <input type="submit" value="save"/>
-  </form>
 
-  <h1>Observation List</h1>
-  <ul id="observation-list"></ul>
+    <div class="form-item">
+      <label for="habitat" class="primary">Habitat</label>
+      <select id="habitat">
+        <option value=""></option>
+        <option value="Garden">Garden</option>
+        <option value="Forest">Forest</option>
+        <option value="Pond">Pond</option>
+        <option value="Loch">Loch</option>
+        <option value="Park">Park</option>
+        <option value="Moors">Moors</option>
+        <option value="River">River</option>
+        <option value="Seaside">Seaside</option>
+        <option value="Countryside">Countryside</option>
+        <option value="Meadow">Meadow</option>
+        <option value="Hillside">Hillside</option>
+      </select>
+    </div>
+
+    <div class="form-item">
+      <label for="contributorName" class="primary">Contributor Name</label>
+      <input type="text" id="contributorName" required/>
+    </div>
+
+    <div class="form-item">
+      <label for="contributorAge" class="primary">Contributor Age</label>
+      <input type="number" id="contributorAge" name="contributorAge" min="1" max="123">
+    </div>
+
+    <div class="form-item">
+      <label for="observationDateTime" class="primary">When Was Animal Observed?</label>
+      <input type="datetime-local" id="observationDateTime" name="observationDateTime">
+    </div>
+  </div>
+  <input type="submit" value="Log Observation"/>
+</form>
+
+<h1>Observation List</h1>
+<ul id="observation-list"></ul>
 </body>
 </html>
