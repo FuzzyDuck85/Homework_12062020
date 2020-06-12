@@ -1,0 +1,46 @@
+body {
+  background: darkgreen url('./mammal_background.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  color: white;
+  opacity: 0.75;
+  font-family: 'Architects Daughter', serif;
+  padding: 0px;
+  margin: 0pxa}
+
+#form-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.form-item {
+  margin-right: 1.8rem;
+}
+
+label.primary {
+  display: block;
+  margin: 0.4em 0;
+}
+
+label::after {
+  content: ":";
+}
+
+button, input[type="submit"] {
+  margin-top: 1rem;
+}
+
+#observation-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.observation-list-item {
+  margin: 0.5rem 0.5rem;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid #20437c;
+  border-radius: 5%;
+  background: #ddeaff;
+}
