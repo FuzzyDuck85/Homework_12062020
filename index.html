@@ -4,19 +4,23 @@
   <meta charset="utf-8">
   <title>Return of the CritterWatch!</title>
   <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+  <link rel="icon" href="css/honeybee.jpg" />
   <script src="js/app.js"></script>
 </head>
 <body>
+  <div id="logo">
+    <img src="css/CW_transparent.png">
+  </div>
   <form id="new-animal-observation-form">
     <div id="form-wrapper">
 
       <div class="form-item">
-        <label for="species" class="primary">Species</label>
+        <label for="species" class="primary">Species</label><br>
         <input type="text" id="species" required/>
       </div>
 
       <div class="form-item">
-        <label for="animalType" class="primary">Animal Type</label>
+        <label for="animalType" class="primary">Animal Type</label><br>
         <select name="animalType" id="animalType" class="primary">
           <option value=""></option>
           <option value="Bird">Bird</option>
@@ -30,7 +34,7 @@
     </div>
 
     <div class="form-item">
-      <label for="habitat" class="primary">Habitat</label>
+      <label for="habitat" class="primary">Habitat</label><br>
       <select id="habitat">
         <option value=""></option>
         <option value="Garden">Garden</option>
@@ -48,22 +52,32 @@
     </div>
 
     <div class="form-item">
-      <label for="contributorName" class="primary">Contributor Name</label>
+      <label for="contributorName" class="primary">Contributor Name</label><br>
       <input type="text" id="contributorName" required/>
     </div>
 
     <div class="form-item">
-      <label for="contributorAge" class="primary">Contributor Age</label>
+      <label for="contributorAge" class="primary">Contributor Age</label><br>
       <input type="number" id="contributorAge" name="contributorAge" min="1" max="123">
     </div>
 
     <div class="form-item">
-      <label for="observationDateTime" class="primary">When Was Animal Observed?</label>
+      <label for="observationDateTime" class="primary">When Was Animal Observed?</label><br>
       <input type="datetime-local" id="observationDateTime" name="observationDateTime">
+    </div>
+
+    <div class="form-item">
+      <label for="favouriteAnimal" class="primary">Is this your favourite Animal?</label><br>
+      <input id="radio1" name="favouriteAnimal" type="radio" value="This is my favoutire!">Heck yeah!</input><br>
+      <input id="radio2" name="favouriteAnimal" type="radio" value="Hmm, I prefer other animals.">Nah, not really...</input><br>
+      <input id="radio2" name="favouriteAnimal" type="radio" value="Dunno, could take it or leave it.">Don't know</input>
+
     </div>
   </div>
   <input type="submit" value="Log Observation"/>
 </form>
+
+<button id="delete-all">Clear All</button>
 
 <h1>Observation List</h1>
 <ul id="observation-list"></ul>

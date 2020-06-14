@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const newAnimalObservationForm = document.querySelector('#new-animal-observation-form');
-    newAnimalObservationForm.addEventListener('submit', handleNewAnimalObservationForm);
+  const newAnimalObservationForm = document.querySelector('#new-animal-observation-form');
+  newAnimalObservationForm.addEventListener('submit', handleNewAnimalObservationForm);
+
+  const deleteAllButton = document.querySelector('#delete-all');
+  deleteAllButton.addEventListener('click', handleDeleteAllClick);
 });
 
 const handleNewAnimalObservationForm = function(event){
@@ -38,6 +41,10 @@ const createObservationListItem = function(form){
   const observationDateTime = document.createElement('p');
   observationDateTime.textContent = form.observationDateTime.value;
   observationListItem.appendChild(observationDateTime);
+
+  const favouriteAnimal = document.createElement('p');
+  favouriteAnimal.textContent = `${form.favouriteAnimal.value}`;
+  observationListItem.appendChild(favouriteAnimal);
 
   return observationListItem;
 
